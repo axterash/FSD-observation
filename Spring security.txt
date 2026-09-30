@@ -12,23 +12,18 @@ public class SpringsecApplication {
 		SpringApplication.run(SpringsecApplication.class, args);}
 }
 
-UserWelcome.java is a class
 
-package com.example.Springsec;
+Hellocontroller1.java:
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+package com.example.myproject;
 
-@SpringBootApplication
-public class SpringsecApplication {
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringsecApplication.class, args);
-	}
-
-}
-
-
-
-
-
+@RestController
+    public class Hellocontroller1{
+        @GetMapping
+        public String greet(){
+            return("welcome");
+        }
+    }
